@@ -1,5 +1,3 @@
-
-
 def datos_basicos(nom,ap,dni,tel,dom,emp,tel_lab,dom_lab) :
     datos_basicos = {
         "nombre": nom,
@@ -46,7 +44,6 @@ def crear_tarifa (tipo,vehiculo,mes) :
         tarifa["bariloche"] = { "temp_alta": False,"zona": False, "recargo": False}
         if (mes >= 6 and mes <= 9) or (mes == 12 or mes == 1 or mes == 2) :
             tarifa["bariloche"]["recargo"] = 9000
-        
     return tarifa
 
 def seguro (veh,per,num_cod) :
@@ -153,16 +150,11 @@ def intr_datos () :
         else :
             tur = "turista nacional"
     return crear_persona (nom,ap,dni,tel,dom,empr,tel_lab,dom_lab,tur,hot,vip)
-    
-
-    
-    
-    
 
 def main () :
     p = intr_datos()
     mostrar_persona(p)
-    chata = crear_vehiculo ("ABC 123","Ford Focus","L298N","V4","sedan","bariloche",False,True,"C12E4")
+    auto1 = crear_vehiculo ("ABC 123","Ford Focus","L298N","V4","sedan","bariloche",False,True,"C12E4")
     oficinas = {
     "buenos_aires": {
         "cant_autos": {
